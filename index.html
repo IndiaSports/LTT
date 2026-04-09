@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>LEGEND TENNIS TIPS</title>
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+
+body{
+background:linear-gradient(135deg,#020617,#020617,#000);
+color:#fff;
+}
+
+/* WRAP */
+.wrap{
+max-width:480px;
+margin:auto;
+padding:25px 16px 120px
+}
+
+/* CARD */
+.card{
+background:rgba(15,23,42,.9);
+border-radius:22px;
+padding:22px;
+margin-bottom:18px;
+box-shadow:0 10px 40px rgba(0,0,0,.6)
+}
+
+.center{text-align:center}
+
+/* DP */
+.dp{
+width:120px;
+height:120px;
+border-radius:50%;
+margin:auto;
+padding:3px;
+background:linear-gradient(135deg,#2563eb,#38bdf8)
+}
+
+.dp img{
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover
+}
+
+/* NAME */
+.name{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:6px;
+margin-top:12px;
+font-size:24px;
+font-weight:800;
+}
+
+/* SUB */
+.sub{
+opacity:.8;
+margin-top:5px;
+font-size:14px
+}
+
+/* HOOK */
+.hook{
+font-size:20px;
+font-weight:800;
+margin-bottom:10px;
+text-align:center
+}
+
+/* BENEFITS */
+.benefits{
+line-height:1.8;
+opacity:.9;
+font-size:14px
+}
+
+/* STATS */
+.statBox{
+display:flex;
+gap:10px;
+margin-top:16px
+}
+
+.stat{
+flex:1;
+background:#020617;
+padding:14px;
+border-radius:14px;
+text-align:center
+}
+
+.stat b{
+color:#38bdf8;
+font-size:18px
+}
+
+/* CTA BUTTON */
+.cta{
+width:100%;
+margin-top:16px;
+padding:16px;
+border:none;
+border-radius:50px;
+background:linear-gradient(90deg,#2563eb,#38bdf8);
+font-weight:800;
+font-size:15px;
+color:#fff;
+cursor:pointer;
+position:relative;
+overflow:hidden;
+transition:.3s;
+}
+
+/* HOVER */
+.cta:hover{
+transform:translateY(-3px) scale(1.03);
+box-shadow:0 15px 40px rgba(56,189,248,.5);
+}
+
+/* CLICK */
+.cta:active{
+transform:scale(.95);
+}
+
+/* SHINE EFFECT */
+.cta::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(120deg,transparent,rgba(255,255,255,.7),transparent);
+transition:.7s;
+}
+
+.cta:hover::before{
+left:100%;
+}
+
+/* TIMER */
+.timer{
+text-align:center;
+margin-top:10px;
+font-size:13px;
+opacity:.7
+}
+
+/* URGENCY */
+.urgency{
+background:#020617;
+padding:14px;
+border-radius:14px;
+margin-top:12px;
+text-align:center;
+font-weight:600;
+color:#38bdf8;
+animation:blink 1.2s infinite;
+}
+
+@keyframes blink{
+50%{opacity:.4}
+}
+
+/* BOTTOM CTA */
+.bottom{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#020617;
+padding:14px;
+border-radius:20px 20px 0 0;
+box-shadow:0 -5px 20px rgba(0,0,0,.6)
+}
+
+.bottom button{
+width:100%;
+padding:16px;
+border:none;
+border-radius:50px;
+background:linear-gradient(90deg,#2563eb,#38bdf8);
+font-weight:900;
+color:#fff;
+}
+
+/* FLOATING ANIMATION */
+.card{
+animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-4px)}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+<!-- PROFILE -->
+<div class="card center">
+
+<div class="dp">
+<img src="https://d1yei2z3i6k35z.cloudfront.net/13184094/69d7b6025dae18.87449087_photo_2026-04-09_00-03-54.jpg">
+</div>
+
+<div class="name">
+LEGEND TENNIS TIPS
+</div>
+
+<div class="sub">Verified Tennis Prediction Channel</div>
+
+</div>
+
+<!-- MAIN CTA -->
+<div class="card">
+
+<div class="hook">
+🎾 Today’s Winning Tennis Prediction
+</div>
+
+<div class="benefits">
+✔ ATP Match Predictions<br>
+✔ Grand Slam Analysis<br>
+✔ Live Match Signals<br>
+✔ Daily Expert Tips
+</div>
+
+<button class="cta" onclick="joinTG()">JOIN FREE TELEGRAM</button>
+
+<div class="timer" id="timer">Auto redirect in 5s</div>
+
+</div>
+
+<!-- STATS -->
+<div class="card">
+
+<div class="statBox">
+
+<div class="stat">
+<b>97%</b><br>Accuracy
+</div>
+
+<div class="stat">
+<b>18K+</b><br>Members
+</div>
+
+<div class="stat">
+<b>LIVE</b><br>Tips
+</div>
+
+</div>
+
+<div class="urgency">
+⚡ Limited Free Access – Join Now
+</div>
+
+<button class="cta" onclick="joinTG()">JOIN NOW</button>
+
+</div>
+
+</div>
+
+<!-- STICKY CTA -->
+<div class="bottom">
+<button onclick="joinTG()">JOIN TELEGRAM CHANNEL</button>
+</div>
+
+<script>
+
+let s=500
+
+setInterval(()=>{
+s--
+document.getElementById("timer").innerText="Auto redirect in "+s+"s"
+if(s==0){joinTG()}
+},1000)
+
+function joinTG(){
+window.location.href="https://t.me/+0zfW55lVcR9mZmY1"
+}
+
+</script>
+
+</body>
+</html>
